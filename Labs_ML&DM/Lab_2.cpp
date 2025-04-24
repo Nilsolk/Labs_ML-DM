@@ -1,5 +1,4 @@
 #include <iostream>
-#include <locale.h>
 using namespace std;
 
 int** createArray(int N) {

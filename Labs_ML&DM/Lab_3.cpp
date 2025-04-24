@@ -1,6 +1,5 @@
 #include <iostream>
 #include <set>
-#include<locale.h>
 using namespace std;
 
 void add_values(int size, set<char>* set) {

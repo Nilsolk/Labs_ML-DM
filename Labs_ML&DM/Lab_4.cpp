@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -22,16 +22,16 @@ bool in_edges(vector<Edge> edges, Edge e) {
 
 void enter_edges(vector<Edge>& edges) {
     int numEdges;
-    cout << "Ââåäèòå êîëè÷åñòâî ğ¸áåğ: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ñ€Ñ‘Ğ±ĞµÑ€: ";
     cin >> numEdges;
 
-    cout << "Ââåäèòå ğ¸áğà â ôîğìàòå (íà÷àëî êîíåö âåñ):\n";
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ€Ñ‘Ğ±Ñ€Ğ° Ğ² Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ‚Ğµ (Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ¾ ĞºĞ¾Ğ½ĞµÑ† Ğ²ĞµÑ):\n";
     for (int i = 0; i < numEdges; i++) {
         Edge e;
         cin >> e.from >> e.to >> e.weight;
 
         if (in_edges(edges, e)) {
-            cout << "Îøèáêà: Ğåáğî " << e.from << " -> " << e.to << " óæå ñóùåñòâóåò. Ââåäèòå ñíîâà\n";
+            cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: Ğ ĞµĞ±Ñ€Ğ¾ " << e.from << " -> " << e.to << " ÑƒĞ¶Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒĞµÑ‚. Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ÑĞ½Ğ¾Ğ²Ğ°\n";
             i--;
             continue;
         }
@@ -73,7 +73,7 @@ void dijkstra(vector<Edge> edges, char start, char end) {
     int endIndex = find_top_index(tops, end);
 
     if (startIndex == -1 || endIndex == -1) {
-        cout << "Îäíà èç âåğøèí íå íàéäåíà â ãğàôå.\n";
+        cout << "ĞĞ´Ğ½Ğ° Ğ¸Ğ· Ğ²ĞµÑ€ÑˆĞ¸Ğ½ Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½Ğ° Ğ² Ğ³Ñ€Ğ°Ñ„Ğµ.\n";
         return;
     }
 
@@ -116,11 +116,11 @@ void dijkstra(vector<Edge> edges, char start, char end) {
     }
 
     if (dist[endIndex] == INT_MAX) {
-        cout << "Ïóòü îò " << start << " äî " << end << " íå ñóùåñòâóåò.\n";
+        cout << "ĞŸÑƒÑ‚ÑŒ Ğ¾Ñ‚ " << start << " Ğ´Ğ¾ " << end << " Ğ½Ğµ ÑÑƒÑ‰ĞµÑÑ‚Ğ²ÑƒĞµÑ‚.\n";
         return;
     }
 
-    cout << "Êğàò÷àéøèé ïóòü: ";
+    cout << "ĞšÑ€Ğ°Ñ‚Ñ‡Ğ°Ğ¹ÑˆĞ¸Ğ¹ Ğ¿ÑƒÑ‚ÑŒ: ";
     string path = "";
     char at = end;
     while (at != start) {
@@ -130,7 +130,7 @@ void dijkstra(vector<Edge> edges, char start, char end) {
     }
     path = start + path;
     cout << path << endl;
-    cout << "Ñóììàğíàÿ ñòîèìîñòü: " << dist[endIndex] << endl;
+    cout << "Ğ¡ÑƒĞ¼Ğ¼Ğ°Ñ€Ğ½Ğ°Ñ ÑÑ‚Ğ¾Ğ¸Ğ¼Ğ¾ÑÑ‚ÑŒ: " << dist[endIndex] << endl;
 }
 
 void start_lab4() {
@@ -138,9 +138,9 @@ void start_lab4() {
     enter_edges(edges);
 
     char start, end;
-    cout << "Ââåäèòå íà÷àëüíóş âåğøèíó: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ñ‡Ğ°Ğ»ÑŒĞ½ÑƒÑ Ğ²ĞµÑ€ÑˆĞ¸Ğ½Ñƒ: ";
     cin >> start;
-    cout << "Ââåäèòå êîíå÷íóş âåğøèíó: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ½ĞµÑ‡Ğ½ÑƒÑ Ğ²ĞµÑ€ÑˆĞ¸Ğ½Ñƒ: ";
     cin >> end;
     dijkstra(edges, start, end);
 }

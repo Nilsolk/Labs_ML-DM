@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 bool validation(int** arr, int n) {
@@ -23,7 +23,7 @@ int** init_arr(int n) {
 int** get_arr(int n) {
     int** arr = init_arr(n);
 
-    cout << "Ââåäèòå ìàòğèöó ñìåæíîñòè (ğàçìåğ " << n << "x" << n << "):" << endl;
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ñƒ ÑĞ¼ĞµĞ¶Ğ½Ğ¾ÑÑ‚Ğ¸ (Ñ€Ğ°Ğ·Ğ¼ĞµÑ€ " << n << "x" << n << "):" << endl;
     while (true) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -34,7 +34,7 @@ int** get_arr(int n) {
             break;
         }
         else {
-            cout << "Îøèáêà: ìàòğèöà äîëæíà ñîäåğæàòü òîëüêî 0 è 1. Ïîâòîğèòå ââîä:" << endl;
+            cout << "ĞÑˆĞ¸Ğ±ĞºĞ°: Ğ¼Ğ°Ñ‚Ñ€Ğ¸Ñ†Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ°Ñ‚ÑŒ Ñ‚Ğ¾Ğ»ÑŒĞºĞ¾ 0 Ğ¸ 1. ĞŸĞ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´:" << endl;
         }
     }
     return arr;
@@ -120,17 +120,17 @@ int** get_reachability_arr(int** adj_matrix, int n) {
 }
 void start_lab5() {
     int n;
-    cout << "Ââåäèòå êîëè÷åñòâî âåğøèí â ãğàôå: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ²ĞµÑ€ÑˆĞ¸Ğ½ Ğ² Ğ³Ñ€Ğ°Ñ„Ğµ: ";
     cin >> n;
 
     int** adj_matrix = get_arr(n);
 
-    cout << "\nÌàòğèöà ñìåæíîñòè:" << endl;
+    cout << "\nĞœĞ°Ñ‚Ñ€Ğ¸Ñ†Ğ° ÑĞ¼ĞµĞ¶Ğ½Ğ¾ÑÑ‚Ğ¸:" << endl;
     print_arr(adj_matrix, n);
 
     int** reachability = get_reachability_arr(adj_matrix, n);
 
-    cout << "\nÌàòğèöà äîñòèæèìîñòè:" << endl;
+    cout << "\nĞœĞ°Ñ‚Ñ€Ğ¸Ñ†Ğ° Ğ´Ğ¾ÑÑ‚Ğ¸Ğ¶Ğ¸Ğ¼Ğ¾ÑÑ‚Ğ¸:" << endl;
     print_arr(reachability, n);
 
     free_matrix(adj_matrix, n);

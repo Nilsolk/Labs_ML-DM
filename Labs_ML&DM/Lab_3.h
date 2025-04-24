@@ -1,2 +1,2 @@
-void start_lab3();
+﻿void start_lab3();
 

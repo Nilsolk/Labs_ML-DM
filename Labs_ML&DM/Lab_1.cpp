@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <stdio.h>
 #include <vector>
 #include <ctype.h>
@@ -48,7 +48,7 @@ vector<Element> removeDublicates(vector<Element>& set) {
 
 void inputElements(vector<Element>& set) {
     int count;
-    cout << "Ââåäèòå êîë-âî ýëåìíòîâ ìíîæåñòâà\n";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼Ð½Ñ‚Ð¾Ð² Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°\n";
     cin >> count;
     for (int i = 0; i < count; i++)
     {
@@ -57,16 +57,16 @@ void inputElements(vector<Element>& set) {
         char b = '0';
         char i_2 = '0';
         do {
-            cout << "Ââåäèòå ÷åòíàÿ öèôðà ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ‚Ð½Ð°Ñ Ñ†Ð¸Ñ„Ñ€Ð° ";
             cin >> i_1;
-            cout << "Ââåäèòå íå÷åòíàÿ öèôðà ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½ÐµÑ‡ÐµÑ‚Ð½Ð°Ñ Ñ†Ð¸Ñ„Ñ€Ð° ";
             cin >> j;
-            cout << "Ââåäèòå áóêâó ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±ÑƒÐºÐ²Ñƒ ";
             cin >> b;
-            cout << "Ââåäèòå ÷åòíàÿ öèôðà ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ‚Ð½Ð°Ñ Ñ†Ð¸Ñ„Ñ€Ð° ";
             cin >> i_2;
-            if (!validation(i_1, j, b, i_2)) cout << "Îøèáêà ââîäà êàêîãî-ëèáî ýëåìåíòà, ïîâòîðèòå ñíîâà\n";
-            if (!isDublicate(set, i_1 - '0', j - '0', b, i_2 - '0')) cout << "Ýëåìåíò óæå ñóùåñòâåò, ïîâòîðèòå ñíîâà\n";
+            if (!validation(i_1, j, b, i_2)) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð° ÐºÐ°ÐºÐ¾Ð³Ð¾-Ð»Ð¸Ð±Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n";
+            if (!isDublicate(set, i_1 - '0', j - '0', b, i_2 - '0')) cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÐµÑ‚, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n";
 
         } while (!validation(i_1, j, b, i_2) ||
             !isDublicate(set, i_1 - '0', j - '0', b, i_2 - '0'));
@@ -76,7 +76,7 @@ void inputElements(vector<Element>& set) {
         newElem.b = b;
         newElem.i_2 = i_2 - '0';
         set.push_back(newElem);
-        cout << "Ýëåìåíò çàãðóæåí\n\n_____________\n";
+        cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½\n\n_____________\n";
     }
 
 }
@@ -90,7 +90,7 @@ void get_vectorValues(vector<Element> set) {
 }
 
 void getUnion(vector<Element> set_1, vector<Element> set_2) {
-    cout << "Îáúåäèíåíèå: ";
+    cout << "ÐžÐ±ÑŠÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ: ";
     set_1.insert(set_1.end(), set_2.begin(), set_2.end());
 
     set_1 = removeDublicates(set_1);
@@ -98,7 +98,7 @@ void getUnion(vector<Element> set_1, vector<Element> set_2) {
 }
 
 void getIntersection(vector<Element> set_1, vector<Element> set_2) {
-    cout << "Ïåðñå÷åíèå: ";
+    cout << "ÐŸÐµÑ€ÑÐµÑ‡ÐµÐ½Ð¸Ðµ: ";
     vector <Element> tmpVector;
     for (Element elem1 : set_1) {
         for (Element elem2 : set_2) {
@@ -159,7 +159,7 @@ vector <Element> additionBA(vector<Element> set_1, vector<Element> set_2) {
 }
 
 void symmDiff(vector<Element> set_1, vector<Element> set_2) {
-    cout << "Ñèììåòðè÷åñêàÿ ðàçíîñòü: ";
+    cout << "Ð¡Ð¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡ÐµÑÐºÐ°Ñ Ñ€Ð°Ð·Ð½Ð¾ÑÑ‚ÑŒ: ";
     vector<Element> abVector = additionAB(set_1, set_2);
     vector<Element> baVector = additionBA(set_1, set_2);
     abVector.insert(abVector.end(), baVector.begin(), baVector.end());
@@ -174,9 +174,9 @@ void start_lab1()
     inputElements(second_set);
     getUnion(first_set, second_set);
     getIntersection(first_set, second_set);
-    cout << "Äîïîëíåíèå A/B: ";
+    cout << "Ð”Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ A/B: ";
     get_vectorValues(additionAB(first_set, second_set));
-    cout << "Äîïîëíåíèå B/A: ";
+    cout << "Ð”Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ B/A: ";
     get_vectorValues(additionBA(first_set, second_set));
     symmDiff(first_set, second_set);
 }

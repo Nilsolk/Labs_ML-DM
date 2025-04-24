@@ -1,9 +1,9 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <set>
 using namespace std;
 
 void add_values(int size, set<char>* set) {
-    cout << "Ââåäèòå ýëåìíòû ìíîæåñòâà: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼Ð½Ñ‚Ñ‹ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ð°: ";
     for (int i = 0; i < size; i++) {
         char elem;
         cin >> elem;
@@ -34,7 +34,7 @@ char** enter_relation(int size) {
     cout << endl;
 }
 void add_relation_pairs(int size, char** arr) {
-    cout << "Ââåäèòå ïàðû ýëåìåíòîâ (ýëåìåíòû ââîäÿòñÿ ÷åðåç ïðîáåë): ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð°Ñ€Ñ‹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² (ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð²Ð²Ð¾Ð´ÑÑ‚ÑÑ Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»): ";
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < 2; j++) {
             char elem;
@@ -77,16 +77,16 @@ void start_lab3()
     set<char> first_set, second_set;
     int first_set_size, second_set_size, relation_size;
 
-    cout << "Ââåäèòå êîë-âî ýëåìåíòîâ â ïåðâîì ìíîæåñòâå: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ðµ: ";
     cin >> first_set_size;
     add_values(first_set_size, &first_set);
 
-    cout << "Ââåäèòå êîë-âî ýëåìåíòîâ âî âòîðîì ìíîæåñòâå: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²Ð¾ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¼Ð½Ð¾Ð¶ÐµÑÑ‚Ð²Ðµ: ";
     cin >> second_set_size;
     add_values(second_set_size, &second_set);
 
 
-    cout << "Ââåäèòå êîëè÷åñòîâ ïàð ýëåìåíòîâ îòíîøåíèÿ: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð¾Ð² Ð¿Ð°Ñ€ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¾Ñ‚Ð½Ð¾ÑˆÐµÐ½Ð¸Ñ: ";
     int size;
     cin >> size;
     char** pairs = enter_relation(size);
@@ -96,7 +96,7 @@ void start_lab3()
     output_set(second_set);
     output_relation_pairs(size, pairs);
 
-    if (is_func(first_set, second_set, pairs, size)) cout << endl << "ßâëÿåòñÿ ôóíêöèåé";
-    else cout << "Íå ÿâëÿåòñÿ ôóíêöèåé";
+    if (is_func(first_set, second_set, pairs, size)) cout << endl << "Ð¯Ð²Ð»ÑÐµÑ‚ÑÑ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÐµÐ¹";
+    else cout << "ÐÐµ ÑÐ²Ð»ÑÐµÑ‚ÑÑ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÐµÐ¹";
 }
 

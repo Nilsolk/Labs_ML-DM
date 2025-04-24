@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int** createArray(int N) {
@@ -13,7 +13,7 @@ bool valid(int** arr, int N) {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			if (arr[i][j] > 1 || arr[i][j] < 0) {
-				cout << "Ìàòðèöà ñîäåðæèò íåêîððåêòíûå ýëåìåíòû, ââåäèòå ñíîâà\n";
+				cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n";
 				return false;
 			}
 		}
@@ -23,7 +23,7 @@ bool valid(int** arr, int N) {
 }
 
 void printArray(int** arr, int N) {
-	cout << "Ââåäåííàÿ ìàòðèöà:\n";
+	cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:\n";
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			cout << arr[i][j] << " ";
@@ -35,17 +35,17 @@ void printArray(int** arr, int N) {
 }
 
 int getN() {
-	cout << "Ââåäèòå N (ðàçìåð êâàäðàòíîé ìàòðèöû): ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ N (Ñ€Ð°Ð·Ð¼ÐµÑ€ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ð½Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹): ";
 	int N;
 	while (true) {
 		cin >> N;
-		if (N < 1 || N > 20) cout << "Ðàçìåð äîëæåí áûòü áîëüøå 0 è ìåíüøå 20, ïîâòîðèòå ñíîâà\n";
+		if (N < 1 || N > 20) cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0 Ð¸ Ð¼ÐµÐ½ÑŒÑˆÐµ 20, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°\n";
 		else break;
 	}
 	return N;
 }
 void addData(int** arr, int N) {
-	cout << "Ââåäèòå çíà÷åíèÿ ìàòðèöû (0 è 1):\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ (0 Ð¸ 1):\n";
 	do {
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
@@ -99,17 +99,17 @@ bool getTransitive(int** arr, int N) {
 }
 
 void checkConditions(int** arr, int N) {
-	if (getSymmetric(arr, N)) cout << "Ìàòðèöà ñèììåòðè÷íà" << endl;
-	else cout << "Ìàòðèöà íåñèììåòðè÷íà" << endl;
+	if (getSymmetric(arr, N)) cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð°" << endl;
+	else cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð½ÐµÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð°" << endl;
 
-	if (getReflection(arr, N)) cout << "Ìàòðèöà ðåôëåêòèâíà" << endl;
-	else cout << "Ìàòðèöà íåðåôëåêòèâíà" << endl;
+	if (getReflection(arr, N)) cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ñ€ÐµÑ„Ð»ÐµÐºÑ‚Ð¸Ð²Ð½Ð°" << endl;
+	else cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð½ÐµÑ€ÐµÑ„Ð»ÐµÐºÑ‚Ð¸Ð²Ð½Ð°" << endl;
 
-	if (getCosoSymmetric(arr, N)) cout << "Ìàòðèöà êîñîñèììåòðè÷íà (àíòèñèììåòðè÷íà)" << endl;
-	else cout << "Ìàòðèöà íåêîñîñèììåòðè÷íà (àíòèñèììåòðè÷íà)" << endl;
+	if (getCosoSymmetric(arr, N)) cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° ÐºÐ¾ÑÐ¾ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð° (Ð°Ð½Ñ‚Ð¸ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð°)" << endl;
+	else cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð½ÐµÐºÐ¾ÑÐ¾ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð° (Ð°Ð½Ñ‚Ð¸ÑÐ¸Ð¼Ð¼ÐµÑ‚Ñ€Ð¸Ñ‡Ð½Ð°)" << endl;
 
-	if (getTransitive(arr, N)) cout << "Ìàòðèöà òðàíçèòèâíà" << endl;
-	else cout << "Ìàòðèöà íåòðàíçèòèâíà" << endl;
+	if (getTransitive(arr, N)) cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ñ‚Ñ€Ð°Ð½Ð·Ð¸Ñ‚Ð¸Ð²Ð½Ð°" << endl;
+	else cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð½ÐµÑ‚Ñ€Ð°Ð½Ð·Ð¸Ñ‚Ð¸Ð²Ð½Ð°" << endl;
 
 }
 

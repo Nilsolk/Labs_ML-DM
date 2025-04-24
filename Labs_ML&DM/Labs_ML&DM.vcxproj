@@ -130,6 +130,7 @@
     <ClCompile Include="Labs_ML&amp;DM.cpp" />
     <ClCompile Include="Lab_1.cpp" />
     <ClCompile Include="Lab_2.cpp" />
+    <ClCompile Include="Lab_3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

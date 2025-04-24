@@ -118,7 +118,7 @@ int** get_reachability_arr(int** adj_matrix, int n) {
 
     return reachability;
 }
-int start_lab5() {
+void start_lab5() {
     int n;
     cout << "Введите количество вершин в графе: ";
     cin >> n;

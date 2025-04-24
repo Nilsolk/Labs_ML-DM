@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <vector>
 #include <ctype.h>
-
 using namespace std;
 struct Element {
     int i_1;

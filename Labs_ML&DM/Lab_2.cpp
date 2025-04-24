@@ -9,7 +9,7 @@ int** createArray(int N) {
 	return arr;
 }
 
-bool validation(int** arr, int N) {
+bool valid(int** arr, int N) {
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
 			if (arr[i][j] > 1 || arr[i][j] < 0) {
@@ -54,7 +54,7 @@ void addData(int** arr, int N) {
 				arr[i][j] = value;
 			}
 		}
-	} while (!validation(arr, N));
+	} while (!valid(arr, N));
 }
 
 
@@ -113,7 +113,7 @@ void checkConditions(int** arr, int N) {
 
 }
 
-int start_lab2()
+void start_lab2()
 {
 	int N = getN();
 	int** arr = createArray(N);
